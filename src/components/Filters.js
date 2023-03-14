@@ -24,7 +24,6 @@ const Filters = () => {
     byFastDelivery,
     byFeatured,
     byRating,
-    searchQuery,
     byMaterial,
     byCategory,
   } = useGlobalContext();

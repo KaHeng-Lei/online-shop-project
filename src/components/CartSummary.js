@@ -31,7 +31,7 @@ const CartSummary = () => {
           <span>NT$ 80</span>
         </div>
         <div>
-          <a href="">Apply A coupon Code</a>
+          <a href="https://codepen.io/your-work">Apply A coupon Code</a>
         </div>
         <div className="underline" style={{ margin: "15px" }}></div>
         <div

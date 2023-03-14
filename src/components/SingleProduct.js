@@ -8,7 +8,6 @@ const SingleProduct = ({ prod, index }) => {
     handleMouseEnter,
     handleMouseLeave,
     addToCart,
-    inStock,
     cart,
     removeFromCart,
   } = useGlobalContext();
