@@ -32,7 +32,7 @@ const SingleProduct = ({ prod, index }) => {
               {cart.some((p) => p.id === prod.id) ? (
                 <Button
                   onClick={() => {
-                    removeFromCart(prod);
+                    removeFromCart(prod.id);
                   }}
                   size="lg"
                   style={{
