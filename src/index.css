@@ -1,12 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Poppins:wght@200;300;400;600&display=swap');
 
-/* Variables */
+/*
+=============== 
+Variables
+===============
+*/
 
 :root {
---transition: all 0.1s ease-in-out;
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --transition: all 0.1s ease-in-out;
 }
 
-/* Global Styles */
+/*
+=============== 
+Global Styles
+===============
+*/
 
 *,
 ::after,
@@ -17,10 +50,65 @@
 }
 
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    font-size: 0.875rem;
 }
-
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+    margin-bottom: 1.25rem;
+    color: var(--clr-grey-5);
+  }
+  @media screen and (min-width: 800px) {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-size: 1.75rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    body {
+      font-size: 1rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1;
+    }
+  }
 main {
     display: flex;
     flex-direction: column;
@@ -33,7 +121,7 @@ main {
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    background-color: #FFAEBC;
+    background-color: var(--clr-primary-7);
     padding: 0 10px;
 }
 
@@ -96,34 +184,6 @@ main {
     flex-direction: column;
 }
 
-.sidebar {
-    width: 270px;
-    height: 100vh;
-    background-color: #fff9fa;
-    transition: var(--transition);
-    transform: translate(-100%);
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    border: 0.1px solid grey;
-    z-index: 1000;
-}
-
-.sidebar a{
-    height: 3rem;
-    align-items: center;
-    display: flex;
-    padding-left: 10px;
-    border-bottom: 0.5px solid grey;
-    text-decoration: none;
-    color: #191314;
-}
-.show-sidebar {
-    transform: translate(0);
-}
-
 .carousel-container {
     width: 100%;
 }
@@ -182,7 +242,6 @@ main {
 }
 
 .pagination-list {
-    list-style: none;
     display: flex;
     flex-direction: row;
     width: 350px;
@@ -197,7 +256,7 @@ main {
 }
 
 .pagination-list li button.active {
-    background-color: #FFAEBC;
+    background-color: var(--clr-primary-5);
 }
 
 .aboutContainer{
@@ -286,7 +345,7 @@ main {
     text-align: center;
     flex-direction: column;
     justify-content: center;
-    background-color: #FFAEBC;
+    background-color: var(--clr-primary-8);
     height: 240px;
 }
 
