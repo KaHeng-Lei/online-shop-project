@@ -210,8 +210,8 @@ main {
         margin-bottom: 10px;
     }
     .threePhotos {
-        width: 600px;
-        height: 600px;
+        width: 500px;
+        height: 500px;
     }
   }
 
@@ -356,13 +356,18 @@ main {
 .single-product {
     margin: auto;
     margin-bottom: 10px;
-    width: 12rem;
+    width: 11rem;
     height: 24rem;
 }
 
-.img-btn-container {
+@media (min-width: 992px) {
+    .single-product {
+        width: 13rem;
+    }
+  }
+/* .img-btn-container {
     width: 12rem;
-}
+} */
 
 .add-to-cart-box .add-to-cart-btn {
     background-color: #191314;
