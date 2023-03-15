@@ -117,6 +117,12 @@ const AppProvider = ({ children }) => {
       type: "ADD_TO_CART",
       payload: prod,
     });
+
+    setShowRightOffCanvas(true);
+
+    setTimeout(() => {
+      setShowRightOffCanvas(false);
+    }, 2000);
   };
 
   const removeFromCart = (id) => {
