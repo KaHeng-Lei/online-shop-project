@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Col, Form, Image, ListGroup, Row } from "react-bootstrap";
-import { useGlobalContext } from "../context/Context";
+import { useGlobalContext } from "../../context/Context";
 import { FiTrash2 } from "react-icons/fi";
 
 const CartDetail = () => {

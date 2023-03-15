@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { AiOutlineClose, AiOutlineCloseSquare } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { useGlobalContext } from "../context/Context";
+import { useGlobalContext } from "../../../context/Context";
 
 const RightCanvasDetial = () => {
   const { cart, removeFromCart, setShowRightOffCanvas } = useGlobalContext();

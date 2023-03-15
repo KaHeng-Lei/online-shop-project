@@ -1,6 +1,6 @@
 import React from "react";
 import { Offcanvas, Navbar, FormControl } from "react-bootstrap";
-import { useGlobalContext } from "../context/Context";
+import { useGlobalContext } from "../../../context/Context";
 
 const TopCanvasDetial = () => {
   const { filterBySearch } = useGlobalContext();

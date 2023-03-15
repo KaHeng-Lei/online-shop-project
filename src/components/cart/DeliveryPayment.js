@@ -1,7 +1,7 @@
 import React from "react";
 import { ListGroup } from "react-bootstrap";
 import Select from "react-select";
-import { useGlobalContext } from "../context/Context";
+import { useGlobalContext } from "../../context/Context";
 
 const DeliveryPayment = () => {
   const {

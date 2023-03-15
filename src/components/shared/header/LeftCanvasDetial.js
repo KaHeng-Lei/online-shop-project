@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Offcanvas } from "react-bootstrap";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
-import { useGlobalContext } from "../context/Context";
+import { useGlobalContext } from "../../../context/Context";
 import { v4 as uuidv4 } from "uuid";
 import MainCategories from "./MainCategories";
 import { Link } from "react-router-dom";

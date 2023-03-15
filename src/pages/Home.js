@@ -1,7 +1,7 @@
 import React from "react";
-import ControlledCarousel from "../components/ControlledCarousel";
-import FeaturedProducts from "../components/FeaturedProducts";
-import ThreePhotos from "../components/ThreePhotos";
+import ControlledCarousel from "../components/home/ControlledCarousel";
+import FeaturedProducts from "../components/home/FeaturedProducts";
+import ThreePhotos from "../components/home/ThreePhotos";
 import { homeSlidedPics } from "../data";
 const home = () => {
   const imageStyle = {

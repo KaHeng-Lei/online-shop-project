@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { useGlobalContext } from "../context/Context";
+import { useGlobalContext } from "../../context/Context";
 import { v4 as uuidv4 } from "uuid";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 

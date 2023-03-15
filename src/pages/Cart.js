@@ -1,7 +1,7 @@
 import React from "react";
-import CartDetail from "../components/CartDetail";
-import DeliveryPayment from "../components/DeliveryPayment";
-import CartSummary from "../components/CartSummary";
+import CartDetail from "../components/cart/CartDetail";
+import DeliveryPayment from "../components/cart/DeliveryPayment";
+import CartSummary from "../components/cart/CartSummary";
 
 const Cart = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
-import { useGlobalContext } from "../context/Context";
+import { useGlobalContext } from "../../context/Context";
 
 const SingleProduct = ({ prod, index }) => {
   const {

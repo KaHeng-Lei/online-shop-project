@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, ListGroup } from "react-bootstrap";
-import { useGlobalContext } from "../context/Context";
+import { useGlobalContext } from "../../context/Context";
 
 const CartSummary = () => {
   const { totalPrice } = useGlobalContext();

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import SingleProduct from "./SingleProduct";
-import ProductPagination from "./ProductPagination";
-import { useGlobalContext } from "../context/Context";
+import SingleProduct from "../product/SingleProduct";
+import ProductPagination from "../product/ProductPagination";
+import { useGlobalContext } from "../../context/Context";
 const FeaturedProducts = () => {
   const { products } = useGlobalContext();
   const [currentPage, setCurrentPage] = useState(1);

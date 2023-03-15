@@ -6,7 +6,7 @@ import OffCanvas from "./OffCanvas";
 import LeftCanvasDetial from "./LeftCanvasDetial";
 import TopCanvasDetial from "./TopCanvasDetial";
 import RightCanvasDetial from "./RightCanvasDetial";
-import { useGlobalContext } from "../context/Context";
+import { useGlobalContext } from "../../../context/Context";
 
 import { Container, Nav, Navbar, NavbarBrand, Badge } from "react-bootstrap";
 const Header = () => {

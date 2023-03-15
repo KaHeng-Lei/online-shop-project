@@ -1,5 +1,5 @@
 import React from "react";
-import ControlledCarousel from "../components/ControlledCarousel";
+import ControlledCarousel from "../components/home/ControlledCarousel";
 import { aboutPics } from "../data";
 const About = () => {
   const carouselStyle = {

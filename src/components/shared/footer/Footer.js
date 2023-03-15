@@ -7,7 +7,12 @@ const Footer = () => {
         <p>KHL Studio</p>
         {/* <img src="" alt="" /> */}
         <p>Contact Us</p>
-        <p>https://github.com/KaHeng-Lei</p>
+        <a
+          href="https://github.com/KaHeng-Lei"
+          style={{ textDecoration: "none", color: "#191314" }}
+        >
+          https://github.com/KaHeng-Lei
+        </a>
       </div>
     </div>
   );

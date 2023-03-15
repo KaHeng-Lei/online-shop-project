@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import SingleProduct from "../components/SingleProduct";
+import SingleProduct from "../components/product/SingleProduct";
 import { useGlobalContext } from "../context/Context";
-import Filters from "../components/Filters";
-import MyPagination from "../components/MyPagination";
+import Filters from "../components/product/Filters";
+import MyPagination from "../components/product/MyPagination";
 import { Dropdown } from "react-bootstrap";
 
 const Products = () => {

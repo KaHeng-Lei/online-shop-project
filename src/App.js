@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import SharedLayout from "./components/SharedLayout";
+import SharedLayout from "./components/shared/SharedLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Cart from "./pages/Cart";
