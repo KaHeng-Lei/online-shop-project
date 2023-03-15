@@ -80,45 +80,6 @@ const Filters = () => {
         </MyAccordion>
       </div>
       <div style={{ marginBottom: "10px" }}>
-        <Form.Check
-          inline
-          type="checkbox"
-          id="checkbox-instock"
-          label="Include Out of Stock"
-          onChange={filterByStock}
-          checked={byStock}
-        />
-      </div>
-      <div style={{ marginBottom: "10px" }}>
-        <Form.Check
-          inline
-          type="checkbox"
-          id="checkbox-fast-delivery"
-          label="Fast Delivery Only"
-          onChange={filterByDelivery}
-          checked={byFastDelivery}
-        />
-      </div>
-      <div style={{ marginBottom: "10px" }}>
-        <Form.Check
-          inline
-          type="checkbox"
-          id="checkbox-featuredItems"
-          label="Featured Items"
-          onChange={filterByFeatured}
-          checked={byFeatured}
-        />
-      </div>
-      {/* by Ratings */}
-      <div style={{ marginBottom: "10px" }}>
-        <span>Rating: </span>
-        <Rating
-          rating={byRating}
-          onClick={filterByRating}
-          style={{ cursor: "pointer" }}
-        />
-      </div>
-      <div style={{ marginBottom: "10px" }}>
         <MyAccordion title={"Material"}>
           {materials.map((material) => (
             <Form.Check
@@ -161,6 +122,45 @@ const Filters = () => {
             />
           ))}
         </MyAccordion>
+      </div>
+      <div style={{ height: "2rem", marginBottom: "10px" }}>
+        <Form.Check
+          inline
+          type="checkbox"
+          id="checkbox-instock"
+          label="Include Out of Stock"
+          onChange={filterByStock}
+          checked={byStock}
+        />
+      </div>
+      <div style={{ height: "2rem", marginBottom: "10px" }}>
+        <Form.Check
+          inline
+          type="checkbox"
+          id="checkbox-fast-delivery"
+          label="Fast Delivery Only"
+          onChange={filterByDelivery}
+          checked={byFastDelivery}
+        />
+      </div>
+      <div style={{ height: "2rem", marginBottom: "10px" }}>
+        <Form.Check
+          inline
+          type="checkbox"
+          id="checkbox-featuredItems"
+          label="Featured Items"
+          onChange={filterByFeatured}
+          checked={byFeatured}
+        />
+      </div>
+      {/* by Ratings */}
+      <div style={{ height: "2rem", marginBottom: "10px" }}>
+        <span>Rating: </span>
+        <Rating
+          rating={byRating}
+          onClick={filterByRating}
+          style={{ cursor: "pointer" }}
+        />
       </div>
       <Button variant="light" onClick={clearFilter}>
         Clear Filters

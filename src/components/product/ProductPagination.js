@@ -1,5 +1,6 @@
 import React from "react";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
+import { v4 as uuidv4 } from "uuid";
 const ProductPagination = ({
   currentPage,
   paginate,
@@ -25,7 +26,7 @@ const ProductPagination = ({
         {[...Array(5)].map((_x, i) => {
           if (currentPage <= 3) {
             return (
-              <li>
+              <li key={uuidv4()}>
                 <button
                   onClick={() => paginate(i + 1)}
                   className={currentPage === i + 1 ? "active" : null}
@@ -36,7 +37,7 @@ const ProductPagination = ({
             );
           } else if (currentPage >= lastPage - 2) {
             return (
-              <li>
+              <li key={uuidv4()}>
                 <button
                   onClick={() => paginate(lastPage - 4 + i)}
                   className={
@@ -49,7 +50,7 @@ const ProductPagination = ({
             );
           } else {
             return (
-              <li>
+              <li key={uuidv4()}>
                 <button
                   onClick={() => paginate(currentPage - 2 + i)}
                   className={

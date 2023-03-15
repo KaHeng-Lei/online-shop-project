@@ -7,6 +7,7 @@ import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 const ThreePhotos = () => {
   const { products } = useGlobalContext();
   const [index, setIndex] = useState(0);
+
   const featuredProducts = products?.filter((prod) => prod.isFeatured === true);
 
   const length = featuredProducts?.length;
@@ -22,7 +23,12 @@ const ThreePhotos = () => {
       <Row>
         {[...Array(3)].map((_x, i) => {
           return (
-            <Col sm={4} key={uuidv4()} className="position-relative">
+            <Col
+              sm={12}
+              lg={4}
+              key={uuidv4()}
+              className="threePhotos-box position-relative"
+            >
               {i === 0 && (
                 <AiOutlineArrowLeft
                   className="arrow arrow-left"

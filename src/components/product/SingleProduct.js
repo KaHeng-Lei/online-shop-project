@@ -14,10 +14,9 @@ const SingleProduct = ({ prod, index }) => {
   const { name, image, price } = prod;
 
   return (
-    <div>
+    <>
       <Card
         className="single-product"
-        style={{ width: "12rem", height: "24rem" }}
         onMouseEnter={() => handleMouseEnter(index)}
         onMouseLeave={handleMouseLeave}
       >
@@ -25,40 +24,24 @@ const SingleProduct = ({ prod, index }) => {
           <Card.Img
             variant="top"
             src={image}
-            style={{ width: "12rem", height: "16rem", objectFit: "cover" }}
+            style={{ width: "100%", height: "16rem", objectFit: "cover" }}
           />
           {hoveredIndex === index && (
-            <div className="add-to-cart-btn">
+            <div className="add-to-cart-box">
               {cart.some((p) => p.id === prod.id) ? (
                 <Button
+                  className="add-to-cart-btn"
                   onClick={() => {
                     removeFromCart(prod.id);
                   }}
                   size="lg"
-                  style={{
-                    backgroundColor: "#191314",
-                    height: "3rem",
-                    opacity: 0.8,
-                    position: "absolute",
-                    top: "13rem",
-                    width: "100%",
-                    border: "none",
-                  }}
                 >
                   Remove from cart
                 </Button>
               ) : (
                 <Button
+                  className="add-to-cart-btn"
                   size="lg"
-                  style={{
-                    backgroundColor: "#191314",
-                    height: "3rem",
-                    opacity: 0.8,
-                    position: "absolute",
-                    top: "13rem",
-                    width: "100%",
-                    border: "none",
-                  }}
                   onClick={() => addToCart(prod)}
                   disabled={!prod.inStock}
                 >
@@ -74,7 +57,7 @@ const SingleProduct = ({ prod, index }) => {
           <Card.Text>NT${price}</Card.Text>
         </Card.Body>
       </Card>
-    </div>
+    </>
   );
 };
 

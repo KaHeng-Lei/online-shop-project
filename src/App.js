@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 import SharedLayout from "./components/shared/SharedLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -16,6 +15,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="cart" element={<Cart />} />
           <Route path="products" element={<Products />} />
+          <Route path="products?search" element={<Products />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>

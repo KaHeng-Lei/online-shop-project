@@ -3,7 +3,7 @@ import { Accordion } from "react-bootstrap";
 
 const MyAccordion = ({ title, children }) => {
   return (
-    <Accordion defaultActiveKey="0">
+    <Accordion>
       <Accordion.Item eventKey="0">
         <Accordion.Header>{title}</Accordion.Header>
         <Accordion.Body>{children}</Accordion.Body>

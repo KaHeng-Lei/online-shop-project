@@ -28,7 +28,7 @@ const Header = () => {
   const handleShowRight = () => setShowRightOffCanvas(true);
 
   return (
-    <Navbar variant="dark" fixed="top">
+    <Navbar variant="dark" sticky="top">
       <Container className="navbar-container">
         <div className="top-and-left-canvas-icon">
           <Nav className="sidebar-toggle" onClick={handleShowLeft}>

@@ -190,12 +190,12 @@ main {
 
 .threePhotosContainer {
     width: 90%;
-    min-width: 1000px;
     margin: 20px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .threePhotos{
@@ -204,12 +204,30 @@ main {
     object-fit: cover;
     transition: var(--transition);
 }
+
+@media (max-width: 992px) {
+    .threePhotos-box{
+        margin-bottom: 10px;
+    }
+    .threePhotos {
+        width: 600px;
+        height: 600px;
+    }
+  }
+
 .arrow {
     font-size: 2rem;
     background-color: white;
     border-radius: 50%;
     opacity: 0.8;
 }
+
+
+@media (max-width: 992px) {
+    .arrow {
+      display: none;
+    }
+  }
 
 .arrow-left{
     position: absolute;
@@ -224,8 +242,7 @@ main {
 }
 
 .featuredProducts {
-    width: 80%;
-    min-width: 1000px;
+    width: 90%;
     margin: 10px 10px;
     display: flex;
     flex-direction: column;
@@ -235,10 +252,11 @@ main {
 
 .featuredProductsContainer {
     display: flex;
+    width: 100%;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 20px;
-    justify-content: space-around;
-    width: 90%;
+    justify-content:space-evenly
 }
 
 .pagination-list {
@@ -338,6 +356,22 @@ main {
 .single-product {
     margin: auto;
     margin-bottom: 10px;
+    width: 12rem;
+    height: 24rem;
+}
+
+.img-btn-container {
+    width: 12rem;
+}
+
+.add-to-cart-box .add-to-cart-btn {
+    background-color: #191314;
+    height: 3rem;
+    opacity: 0.8;
+    position: absolute;
+    top: 13rem;
+    width: 100%;
+    border: none;
 }
 
 #footer{

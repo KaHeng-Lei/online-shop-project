@@ -4,6 +4,7 @@ import { useGlobalContext } from "../context/Context";
 import Filters from "../components/product/Filters";
 import MyPagination from "../components/product/MyPagination";
 import { Dropdown } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 
 const Products = () => {
   const {

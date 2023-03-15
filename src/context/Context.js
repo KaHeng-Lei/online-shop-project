@@ -103,6 +103,8 @@ const AppProvider = ({ children }) => {
   const [destinationOption, setDestinationOption] = useState(null);
   const [deliveryOption, setDeliveryOption] = useState(null);
   const [paymentOption, setPaymentOption] = useState(null);
+  const [searchInput, setSearchInput] = useState(null);
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
@@ -212,6 +214,10 @@ const AppProvider = ({ children }) => {
       type: "FILTER_BY_SEARCH",
       payload: query,
     });
+
+    setTimeout(() => {
+      setShowTopOffCanvas(false);
+    }, 1000);
   };
 
   const removeFilterByMaterial = (material) => {
@@ -239,6 +245,14 @@ const AppProvider = ({ children }) => {
     });
     setSubtotals(subtotalsObj);
   }, [state.cart]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  });
 
   return (
     <AppContext.Provider
@@ -286,6 +300,8 @@ const AppProvider = ({ children }) => {
         clearFilter,
         filterByRating,
         filterBySearch,
+        searchInput,
+        setSearchInput,
       }}
     >
       {children}
