@@ -104,7 +104,6 @@ const AppProvider = ({ children }) => {
   const [deliveryOption, setDeliveryOption] = useState(null);
   const [paymentOption, setPaymentOption] = useState(null);
   const [searchInput, setSearchInput] = useState(null);
-  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
@@ -245,14 +244,6 @@ const AppProvider = ({ children }) => {
     });
     setSubtotals(subtotalsObj);
   }, [state.cart]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setViewportWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  });
 
   return (
     <AppContext.Provider
