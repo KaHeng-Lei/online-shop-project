@@ -4,7 +4,7 @@ import { AiOutlineClose, AiOutlineCloseSquare } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../../context/Context";
 
-const RightCanvasDetial = () => {
+const RightCanvasDetial = ({ handleClose }) => {
   const { cart, removeFromCart, setShowRightOffCanvas } = useGlobalContext();
   return (
     <div className="cart-container">
@@ -34,7 +34,7 @@ const RightCanvasDetial = () => {
               </span>
             );
           })}
-          <Link to="/cart">
+          <Link to="/cart" onClick={handleClose}>
             <Button style={{ width: "90%", margin: "0 10px" }}>
               Go to Cart
             </Button>

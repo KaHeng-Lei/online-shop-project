@@ -28,23 +28,25 @@ const Header = () => {
   const handleShowRight = () => setShowRightOffCanvas(true);
 
   return (
-    <Navbar variant="dark">
+    <Navbar variant="dark" fixed="top">
       <Container className="navbar-container">
         <div className="top-and-left-canvas-icon">
           <Nav className="sidebar-toggle" onClick={handleShowLeft}>
             <AiOutlineMenu color="white" fontSize="25px" />
           </Nav>
+          {/* left/start offCanvase for products */}
           <OffCanvas
             placement={"start"}
             handleClose={handleCloseLeft}
             show={showLeftOffCanvas}
-            style={{ height: "100vh", overflowY: "auto", width: "400px" }}
+            style={{ height: "100vh", overflowY: "auto", width: "300px" }}
           >
-            <LeftCanvasDetial />
+            <LeftCanvasDetial handleClose={handleCloseLeft} />
           </OffCanvas>
           <Nav className="sidebar-toggle" onClick={handleShowTop}>
             <FaSearch color="white" fontSize="25px" />
           </Nav>
+          {/* top offCanvase for search  */}
           <OffCanvas
             placement={"top"}
             handleClose={handleCloseTop}
@@ -61,13 +63,14 @@ const Header = () => {
           <FaShoppingCart color="white" fontSize="25px" />
           <Badge bg="none">{totalQty}</Badge>
         </Nav>
+        {/* right/end offCanvase for cart */}
         <OffCanvas
           placement={"end"}
           handleClose={handleCloseRight}
           show={showRightOffCanvas}
           style={{ height: "100vh", overflowY: "auto" }}
         >
-          <RightCanvasDetial />
+          <RightCanvasDetial handleClose={handleCloseRight} />
         </OffCanvas>
       </Container>
     </Navbar>

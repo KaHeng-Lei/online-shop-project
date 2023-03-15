@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import MainCategories from "./MainCategories";
 import { Link } from "react-router-dom";
 
-const LeftCanvasDetial = () => {
+const LeftCanvasDetial = ({ handleClose }) => {
   const {
     showMenOptions,
     setShowMenOptions,
@@ -57,6 +57,7 @@ const LeftCanvasDetial = () => {
           <Link
             to="/products"
             style={{ color: "black", textDecoration: "none" }}
+            onClick={handleClose}
           >
             All Products
           </Link>
