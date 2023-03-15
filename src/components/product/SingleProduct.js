@@ -21,11 +21,7 @@ const SingleProduct = ({ prod, index }) => {
         onMouseLeave={handleMouseLeave}
       >
         <div className="img-btn-container">
-          <Card.Img
-            variant="top"
-            src={image}
-            style={{ width: "100%", height: "16rem", objectFit: "cover" }}
-          />
+          <Card.Img variant="top" src={image} className="single-prod-image" />
           {hoveredIndex === index && (
             <div className="add-to-cart-box">
               {cart.some((p) => p.id === prod.id) ? (
