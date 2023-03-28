@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { useGlobalContext } from "../../context/Context";
+import { useGlobalContext } from "../../../context/Context";
 import { v4 as uuidv4 } from "uuid";
-import MyAccordion from "./MyAccordion";
-import Rating from "./Rating";
+import MyAccordion from "../../product/MyAccordion";
+import Rating from "../../product/Rating";
 
 const Filters = () => {
   const {

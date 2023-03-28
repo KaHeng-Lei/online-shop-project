@@ -14,7 +14,7 @@ const DeliveryPayment = () => {
   } = useGlobalContext();
 
   return (
-    <ListGroup style={{ width: "65%", marginTop: "20px" }}>
+    <ListGroup className="delivery-container">
       <ListGroup.Item
         style={{
           fontSize: "1.3rem",

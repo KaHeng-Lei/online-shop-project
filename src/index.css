@@ -55,6 +55,9 @@ body {
     line-height: 1.5;
     font-size: 0.875rem;
 }
+nav {
+    list-style-type: none;
+}
 ul {
     list-style-type: none;
 }
@@ -116,6 +119,7 @@ main {
     align-items: center;
 }
 .navbar {
+    width: 100%;
     height: 4rem;
     display: flex;
     flex-direction: row;
@@ -259,11 +263,21 @@ main {
     justify-content:space-evenly
 }
 
+@media (max-width: 640px) {
+    .featuredProductsContainer{
+        padding: 5px;
+    }
+}
+
+.featured-pagination-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .pagination-list {
     display: flex;
     flex-direction: row;
     width: 350px;
-    justify-content: space-between;
 }
 
 .pagination-list li button {
@@ -334,7 +348,7 @@ main {
 .product-box {
     display: flex;
     flex-direction: column;
-    width: 78%;
+    width: 100%;
     padding: 20px;
     align-items: center;
 }
@@ -357,7 +371,6 @@ main {
     margin: auto;
     margin-bottom: 10px;
     width: 10rem;
-    height: 24rem;
 }
 
 .single-prod-image {
@@ -375,6 +388,9 @@ main {
     width: 12rem;
 } */
 
+.single-product-detail{
+    height: 9rem;
+}
 .add-to-cart-box .add-to-cart-btn {
     background-color: #191314;
     height: 3rem;
@@ -397,3 +413,63 @@ main {
 #footer .description p{
     line-height: 0.4rem;
 }
+
+.top-to-btn{
+    position: relative;
+}
+.icon-position{
+position: fixed;
+bottom: 40px;
+right: 25px;
+z-index: 20;
+}
+.icon-style{
+background-color:#fff;
+border: 2px solid var(--clr-primary-5);
+border-radius: 10%;
+height: 50px;
+width: 50px;
+padding: 5px 5px;
+color: var(--clr-primary-5);
+cursor: pointer;
+transition: all .2s ease-in-out;
+opacity: 0.7;
+}
+.icon-style:hover{
+animation: none;
+background: #fff;
+opacity: 0.9;
+color: var(--clr-primary-4);
+border: 2px solid var(--clr-primary-4);
+}
+
+.cart-second-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.delivery-container {
+    width: 30%;
+    margin-top: 20px;
+}
+
+.cart-summary-container{
+    width: 30%;
+    margin-top: 20px;   
+}
+
+@media (max-width: 640px) {
+    .cart-second-container {
+        flex-direction: column;
+    }
+
+    .delivery-container {
+        width: 100%;
+    }
+    
+    .cart-summary-container{
+        width: 100%;
+    }
+}
+

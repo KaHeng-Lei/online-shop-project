@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import SingleProduct from "../components/product/SingleProduct";
 import { useGlobalContext } from "../context/Context";
-import Filters from "../components/product/Filters";
+
 import MyPagination from "../components/product/MyPagination";
 import { Dropdown } from "react-bootstrap";
+import ScrollToTop from "../components/product/ScrollToTop";
 
 const Products = () => {
   const {
@@ -97,9 +98,7 @@ const Products = () => {
 
   return (
     <div className="productHome">
-      <div className="filters">
-        <Filters />
-      </div>
+      <ScrollToTop />
       <div className="product-box">
         <div className="productList-info">
           <span>

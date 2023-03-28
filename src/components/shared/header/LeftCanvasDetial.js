@@ -5,6 +5,7 @@ import { useGlobalContext } from "../../../context/Context";
 import { v4 as uuidv4 } from "uuid";
 import MainCategories from "./MainCategories";
 import { Link } from "react-router-dom";
+import Filters from "./Filters";
 
 const LeftCanvasDetial = ({ handleClose }) => {
   const {
@@ -101,6 +102,9 @@ const LeftCanvasDetial = ({ handleClose }) => {
             )}
           </React.Fragment>
         ))}
+        <div className="filters">
+          <Filters />
+        </div>
       </Offcanvas.Body>
     </>
   );

@@ -5,7 +5,7 @@ import { useGlobalContext } from "../../context/Context";
 const CartSummary = () => {
   const { totalPrice } = useGlobalContext();
   return (
-    <ListGroup style={{ width: "30%", marginTop: "20px" }}>
+    <ListGroup className="cart-summary-container">
       <ListGroup.Item
         style={{
           fontSize: "1.3rem",

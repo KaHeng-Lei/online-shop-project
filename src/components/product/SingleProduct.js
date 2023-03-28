@@ -48,7 +48,7 @@ const SingleProduct = ({ prod, index }) => {
           )}
         </div>
 
-        <Card.Body>
+        <Card.Body className="single-product-detail">
           <Card.Title>{name}</Card.Title>
           <Card.Text>NT${price}</Card.Text>
         </Card.Body>

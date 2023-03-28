@@ -26,7 +26,7 @@ const CartDetail = () => {
           lineHeight: "2rem",
         }}
       >
-        <Row>
+        <Row xs={0}>
           <Col sm={4}>
             <span>Product Infomation</span>
           </Col>
@@ -49,14 +49,16 @@ const CartDetail = () => {
         return (
           <ListGroup.Item key={id}>
             <Row>
-              <Col sm={2}>
+              <Col xs={3} sm={2}>
                 <Image src={image} alt={name} fluid thumbnail />
               </Col>
-              <Col sm={2}>
+              <Col xs={3} sm={2}>
                 <span>{name}</span>
               </Col>
-              <Col sm={2}>NT${price}</Col>
-              <Col sm={2}>
+              <Col xs={6} sm={2}>
+                NT${price}
+              </Col>
+              <Col xs={6} sm={2}>
                 <Form.Select
                   value={qty}
                   onChange={(e) => {
@@ -69,8 +71,10 @@ const CartDetail = () => {
                   ))}
                 </Form.Select>
               </Col>
-              <Col sm={2}>NT${subtotals?.[id]}</Col>
-              <Col sm={2}>
+              <Col xs={4} sm={2}>
+                NT${subtotals?.[id]}
+              </Col>
+              <Col xs={2} sm={2}>
                 <Button
                   type="button"
                   variant="light"

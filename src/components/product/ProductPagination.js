@@ -16,7 +16,7 @@ const ProductPagination = ({
   };
 
   return (
-    <nav>
+    <nav className="featured-pagination-container">
       <ul className="pagination-list">
         <li>
           <button onClick={prev} disabled={currentPage === 1}>
